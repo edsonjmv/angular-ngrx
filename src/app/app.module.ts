@@ -13,6 +13,7 @@ import { UserEffects } from './store/effects/user.effects';
 import { ConfigEffects } from './store/effects/config.effects';
 import { environment } from '../environments/environment.prod';
 import { UserService } from './services/user.service';
+import { ConfigService } from './services/config.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { UserService } from './services/user.service';
     StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
-  providers: [UserService],
+  providers: [UserService, ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,5 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
+<a class="navbar-brand" routerLink="/">
+  Angular - NGRX / {{ (config$ | async)?.adminName }}
+</a>
 
 <router-outlet></router-outlet>
